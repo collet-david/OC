@@ -2,19 +2,69 @@
 <html>
     <head>
         <title>Page title</title>
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <p>Page content here</p>
-        <!-- on inclut jQuery via CDN -->
-        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        
+        <link rel="stylesheet" href="base.css" />
+        <script src="jquery-3.6.0.js"></script>
         <script src="test.js"></script>
+        <!--<script src="fonctions.js"></script>
+        -->
+    </head>
+    
+               
 
-
+<body>
         <h1>Bienvenue sur ce site de test</h1>
-        <p>Le but de ce site est assez simple, il s'agit d'une vitrine. Vous y trouverez des morceau de code, des outils...</p>
-        <p>Il n'y a pas forcement de contexte quant à tout ça. Des projets plus complet sera listé ici, mais n'y serons pas hébergé. </p>
+        <p class="test">Le but de ce site est assez simple, il s'agit d'une vitrine. Vous y trouverez des morceau de code, des outils...</p>
+        <p>Il n'y a pas forcement de contexte quant à tout ça. Des projets plus complets seront listés ici, mais n'y serons pas hébergés. </p>
         <p>Plus d'infos sur le code sur le <a href="https://github.com/collet-david/OC">GitHub</a>.</p>
+
+        <h2>Un peu de moi</h2>
+        <p>Pour la petite histoire, moi c'est David, et c'est à peu prêt tout ce qu'il y a dire sur moi.</p>
+        <p>Au niveau de mon environnement de travail : </p>
+        <ul>
+            <li>Windows 11</li>
+            <li>Vs Code</li>
+            <li>Auto formation sur <a href="https://www.openclassrooms.com">OpenClassrooms</a></li>
+        </ul>
+
+        <hr>
+        <h1>Calculateur de moyenne</h1>
+        <h2>Jouer avec JQuery</h2>
+ 
+<div id="crea">
+
+<form id="formdetest" action="#">
+
+<input type="number" id="nombreform" value="">
+
+<input type="submit" id="ajouter" value="Ajouter un nombre pour la moyenne">
+
+
+</form>
+
+</div>
+<div>
+    <p id="return">Entrez un premier nombre pour lancer le calcul de moyenne</p>
+
+<div id="listeNombre"></div>
+
+</div>
+
+<hr>
+ <h1>Un joyeux Anniversaire</h1>
+ <h2>Exercice OpenClassRooms</h2>
+
+<button id="boutonAnniv">C'est ton anniversaire ?</button>
+<div id="anniv1"></div>
+<div id="anniv2"></div>
+<div id="anniv3"></div>
+
+
+<hr>
+
+
+
+
+
+
     </body>
 </html>
