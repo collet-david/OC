@@ -137,9 +137,9 @@ De même, il y a deux opérateurs d'inégalité,   !=  et   !==  , avec la même
 
 ```js 
 
-&&  // ET logique – pour vérifier si deux conditions sont toutes les deux vraies ;
+&&  // ET logique – pour vérifier si deux conditions sont toutes les deux vraies 
 
-||  // OU logique – pour vérifier si au moins une condition est vraie ;
+||  // OU logique – pour vérifier si au moins une condition est vraie 
 
 !   // NON logique – pour vérifier si une condition n'est pas vraie. 
 
