@@ -101,4 +101,47 @@ monTableau.unshift("hey");// ajoute "hey" au début du tableau
 monTableau.pop(); // supprimer le dernier item du tableau
 ```
 
+## Conditions
+
+```js
+if (myBoolean) {
+// réaction à la valeur vraie de myBoolean
+} else {
+// réaction à la valeur faux de myBoolean
+}
+```
+
+* <  inférieur à
+* <=   inférieur ou égal à 
+* ==   égal à 
+* \>=   supérieur ou égal à 
+* \>   supérieur à 
+* !=   différent de
+
+Il y a deux façons de vérifier si deux valeurs sont égales en JavaScript :  ==  et  ===, aussi appelées égalité simple et égalité stricte :
+
+l'égalité simple vérifie la valeur, mais pas le type. 
+
+```js 
+5 == "5"; //true
+```
+
+par contre, l'égalité stricte vérifie à la fois la valeur et le type.
+
+```js 
+5 === "5"; //false 
+```
+
+
+De même, il y a deux opérateurs d'inégalité,   !=  et   !==  , avec la même distinction.
+
+```js 
+
+&&  // ET logique – pour vérifier si deux conditions sont toutes les deux vraies ;
+
+||  // OU logique – pour vérifier si au moins une condition est vraie ;
+
+!   // NON logique – pour vérifier si une condition n'est pas vraie. 
+
+```
 
