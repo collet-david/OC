@@ -9,6 +9,8 @@ let maVariable;
 maVariable = 6;
 
 var maVariable2;
+
+const maConstante; //constante
 ```
 
 
@@ -144,4 +146,209 @@ De même, il y a deux opérateurs d'inégalité,   !=  et   !==  , avec la même
 !   // NON logique – pour vérifier si une condition n'est pas vraie. 
 
 ```
+
+```js
+let firstUser = {
+    name: "Will Alexander",
+    age: 33,
+    accountLevel: "normal"
+};
+
+
+switch (firstUser.accountLevel) {
+case 'normal':
+      console.log('You have a normal account!');
+
+break;
+case 'premium':
+      console.log('You have a premium account!');
+
+break;
+case 'mega-premium':
+      console.log('You have a mega premium account!');
+break;
+
+default:
+      console.log('Unknown account type!');
+}
+
+// idem que 
+
+if (firstUser.accountLevel === 'normal' ) {
+      console.log('You have a normal account!');
+} else if (firstUser.accountLevel === 'premium' ) {
+      console.log('You have a premium account!');
+} else if (firstUser.accountLevel === 'mega-premium' ) {
+      console.log('You have a mega premium account!');
+}  else {
+      console.log('Unknown account type!');
+}
+```
+
+## Boucles
+
+```js
+const variable = 10;
+for (let i = 0; i < variable; i++) {
+   console.log("");
+}
+```
+
+### For...in
+
+```js
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate'",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let i in passengers) {
+   console.log("Embarquement du passager " + passengers[i]);
+}
+```
+
+###  For...of
+
+```js
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let passenger of passengers) {
+   console.log("Embarquement du passager " + passenger);
+}
+```
+
+### while
+
+```js
+let seatsLeft = 10;
+let passengersStillToBoard = 8;
+let passengersBoarded = 0;
+
+while (seatsLeft > 0 && passengersStillToBoard > 0) {
+    passengersBoarded++; // un passager embarque
+    passengersStillToBoard--; // donc il y a un passager de moins à embarquer
+    seatsLeft--; // et un siège de moins
+}
+
+console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges
+```
+
+## Fonctions 
+
+```js 
+
+// On définit la fonction
+
+function afficherDeuxValeurs(valeur1, valeur2) {
+      console.log('Première valeur:' + valeur1);
+      console.log('Deuxième valeur:' + valeur2);
+}
+
+// On exécute la fonction
+afficherDeuxValeurs(12, 'Bonjour');
+
+// On obtient dans la console
+// > Première valeur:12 
+// > Deuxième valeur:Bonjour 
+```
+
+## Méthodes
+
+Exemple de base : 
+
+```js
+class BankAccount {
+   constructor(owner, balance) {
+      this.owner = owner;
+      this.balance = balance;
+   }
+} 
+
+const newAccount = new BankAccount("Will Alexander", 500);
+```
+On peut rajouter des "options" sur la class
+
+```js 
+
+class BankAccount {
+   constructor(owner, balance) {
+      this.owner = owner;
+      this.balance = balance;
+   }
+   showBalance() {
+      console.log("Solde: " + this.balance + " EUR");
+   }
+}
+```
+
+donc on peut faire : 
+
+```js
+newAccount.showBalance(); // imprime "Solde: 500 EUR" à la console
+```
+
+on peut complexifier : 
+
+```js
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+    
+    showBalance() {
+        console.log("Solde: " + this.balance + " EUR");
+    }
+    
+    deposit(amount) {
+        console.log("Dépôt de " + amount + " EUR");
+        this.balance += amount;
+        this.showBalance();
+    }
+    
+    withdraw(amount) {
+        if (amount > this.balance) {
+                 console.log("Retrait refusé !");
+        } else {
+            console.log("Retrait de " + amount + " EUR");
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
+}
+```
+
+on peux faire des registre de fonctions
+
+```js
+class BePolite {
+    
+    static sayHello() {
+        console.log("Hello!");
+    }
+    
+    static sayHelloTo(name) {
+        console.log("Hello " + name + "!");
+    }
+    
+    static add(firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
+    }
+}
+
+BePolite.sayHello(); // imprime "Hello!""
+
+BePolite.sayHelloTo("Will"); // imprime "Hello Will!""
+
+const sum = BePolite.add(2, 3); // sum = 5
+```
+
+>Toutes ces fonctionnalités pourraient être des fonctions, mais l'avantage d'utiliser des méthodes de classe statiques est par exemple de pouvoir les regrouper par catégorie ou par type.
 
